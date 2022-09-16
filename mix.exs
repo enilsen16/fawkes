@@ -56,7 +56,6 @@ defmodule Fawkes.MixProject do
     [
       name: "fawkes",
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/keathley/fawkes"}
     ]
   end
 
