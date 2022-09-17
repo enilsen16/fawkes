@@ -13,7 +13,7 @@ defmodule Fawkes.Handlers.Help do
       |> Enum.flat_map(& String.split(&1, "\n"))
       |> Enum.map(&String.trim(&1))
       |> Enum.reject(& &1 == "")
-      |> Enum.map_join(& String.replace(&1, ~r/^fawkes /, bot.bot_alias || "name"), "\n")
+      |> Enum.map_join("\n", & String.replace(&1, ~r/^fawkes /, bot.bot_alias || "name"))
 
     {:ok, message}
   end
