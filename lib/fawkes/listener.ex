@@ -29,8 +29,7 @@ defmodule Fawkes.Listener do
 
     help_msg =
       listeners
-      |> Enum.map(& &1.help)
-      |> Enum.join()
+      |> Enum.map_join("", & &1.help)
 
     quote do
       @doc false
