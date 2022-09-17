@@ -31,6 +31,7 @@ defmodule Fawkes.Listener do
       listeners
       |> Enum.map_join("", & &1.help)
 
+
     quote do
       @doc false
       def help do
